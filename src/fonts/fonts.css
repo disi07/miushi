@@ -1,0 +1,129 @@
+/* Open-Sans */
+
+@font-face {
+  font-family: 'OpenSans-Regular';
+  src: url('open-sans/OpenSans-Regular.eot');
+  src: url('open-sans/OpenSans-Regular.woff2') format('woff2'),
+       url('open-sans/OpenSans-Regular.woff') format('woff'),
+       url('open-sans/OpenSans-Regular.ttf') format('truetype'),
+       url('open-sans/OpenSans-Regular.svg#OpenSans-Regular') format('svg'),
+       url('open-sans/OpenSans-Regular.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'OpenSans-Bold';
+  src: url('open-sans/OpenSans-Bold.eot');
+  src: url('open-sans/OpenSans-Bold.woff2') format('woff2'),
+       url('open-sans/OpenSans-Bold.woff') format('woff'),
+       url('open-sans/OpenSans-Bold.ttf') format('truetype'),
+       url('open-sans/OpenSans-Bold.svg#OpenSans-Bold') format('svg'),
+       url('open-sans/OpenSans-Bold.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'OpenSans-ExtraBold';
+  src: url('open-sans/OpenSans-ExtraBold.eot');
+  src: url('open-sans/OpenSans-ExtraBold.woff2') format('woff2'),
+       url('open-sans/OpenSans-ExtraBold.woff') format('woff'),
+       url('open-sans/OpenSans-ExtraBold.ttf') format('truetype'),
+       url('open-sans/OpenSans-ExtraBold.svg#OpenSans-ExtraBold') format('svg'),
+       url('open-sans/OpenSans-ExtraBold.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'OpenSans-SemiBold';
+  src: url('open-sans/OpenSans-SemiBold.eot');
+  src: url('open-sans/OpenSans-SemiBold.woff2') format('woff2'),
+       url('open-sans/OpenSans-SemiBold.woff') format('woff'),
+       url('open-sans/OpenSans-SemiBold.ttf') format('truetype'),
+       url('open-sans/OpenSans-SemiBold.svg#OpenSans-SemiBold') format('svg'),
+       url('open-sans/OpenSans-SemiBold.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'OpenSans-Italic';
+  src: url('open-sans/OpenSans-Italic.eot');
+  src: url('open-sans/OpenSans-Italic.woff2') format('woff2'),
+       url('open-sans/OpenSans-Italic.woff') format('woff'),
+       url('open-sans/OpenSans-Italic.ttf') format('truetype'),
+       url('open-sans/OpenSans-Italic.svg#OpenSans-Italic') format('svg'),
+       url('open-sans/OpenSans-Italic.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'OpenSans-Light';
+  src: url('open-sans/OpenSans-Light.eot');
+  src: url('open-sans/OpenSans-Light.woff2') format('woff2'),
+       url('open-sans/OpenSans-Light.woff') format('woff'),
+       url('open-sans/OpenSans-Light.ttf') format('truetype'),
+       url('open-sans/OpenSans-Light.svg#OpenSans-Light') format('svg'),
+       url('open-sans/OpenSans-Light.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Lemon-Tuesday */
+
+@font-face {
+  font-family: 'LemonTuesday';
+  src: url('lemon-tuesday/LemonTuesday.eot');
+  src: url('lemon-tuesday/LemonTuesday.woff2') format('woff2'),
+       url('lemon-tuesday/LemonTuesday.woff') format('woff'),
+       url('lemon-tuesday/LemonTuesday.ttf') format('truetype'),
+       url('lemon-tuesday/LemonTuesday.svg#LemonTuesday') format('svg'),
+       url('lemon-tuesday/LemonTuesday.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Roboto */
+
+@font-face {
+  font-family: 'Roboto-Regular';
+  src: url('roboto/Roboto-Regular.eot');
+  src: url('roboto/Roboto-Regular.woff2') format('woff2'),
+       url('roboto/Roboto-Regular.woff') format('woff'),
+       url('roboto/Roboto-Regular.ttf') format('truetype'),
+       url('roboto/Roboto-Regular.svg#Roboto-Regular') format('svg'),
+       url('roboto/Roboto-Regular.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Roboto-Slab */
+
+@font-face {
+  font-family: 'RobotoSlab-Bold';
+  src: url('roboto-slab/RobotoSlab-Bold.eot');
+  src: url('roboto-slab/RobotoSlab-Bold.woff2') format('woff2'),
+       url('roboto-slab/RobotoSlab-Bold.woff') format('woff'),
+       url('roboto-slab/RobotoSlab-Bold.ttf') format('truetype'),
+       url('roboto-slab/RobotoSlab-Bold.svg#RobotoSlab-Bold') format('svg'),
+       url('roboto-slab/RobotoSlab-Bold.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Myriad-Pro */
+
+@font-face {
+  font-family: 'MyriadPro-Regular';
+  src: url('myriad-pro/myriad-pro/MyriadPro-Regular.eot');
+  src: url('myriad-pro/MyriadPro-Regular.woff2') format('woff2'),
+       url('myriad-pro/MyriadPro-Regular.woff') format('woff'),
+       url('myriad-pro/MyriadPro-Regular.ttf') format('truetype'),
+       url('myriad-pro/MyriadPro-Regular.svg#MyriadPro-Regular') format('svg'),
+       url('myriad-pro/MyriadPro-Regular.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}

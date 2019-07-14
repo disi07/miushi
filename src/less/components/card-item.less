@@ -1,0 +1,262 @@
+.container--cards {
+    padding: 0;
+
+    @media (min-width: 375px) {
+        padding: 0 0.9375rem;
+    }
+}
+
+.product-cards {
+    // width: 100%;
+    margin: auto;
+    overflow: hidden;
+
+    @media (min-width: 765px) {
+        width: 719px;
+    }
+
+    @media (min-width: 1170px) {
+        width: 1120px;
+    }
+}
+
+.card-list {
+    width: 9999px;
+    .p-0--m-0;
+    margin-bottom: 50px;
+    white-space: nowrap;
+    list-style: none;
+    transition: margin-left 500ms;
+
+    @media (min-width: 765px) {
+        margin-bottom: 44px;
+    }
+}
+
+.card-item {
+	position: relative;
+    left: -2.08%;
+    display: inline-block;
+    width: 227px;
+    height: 433px;
+    .p-0;
+    text-align: center;
+    background-color: @white_1;
+    box-shadow: 4px 4px 29px 0px rgba(0, 0, 0, 0.07);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.3s ease-out;
+
+    &:hover,
+    &:focus {
+        transform: scale(1.05);
+    }
+
+    &:not(:first-child) {
+        margin-left: 24px;
+
+        @media (min-width: 765px) {
+            margin-left: 25px;
+        }
+    }
+
+    @media (min-width: 375px) {
+        left: -1.97%;
+    }
+
+    @media (min-width: 425px) {
+        left: -1.7%;
+    }
+
+    @media (min-width: 475px) {
+        left: -1.45%;
+    }
+
+    @media (min-width: 500px) {
+        left: -1.3%;
+    }
+
+    @media (min-width: 550px) {
+        left: -2.23%;
+    }
+
+    @media (min-width: 600px) {
+        left: -2.1%;
+        width: 227px;
+        height: 433px;
+    }
+
+    @media (min-width: 650px) {
+        left: -1.86%;
+    }
+
+    @media (min-width: 700px) {
+        left: -1.55%;
+    }
+
+    @media (min-width: 750px) {
+        left: -1.35%;
+    }
+
+    @media (min-width: 765px) {
+        left: 0;
+        width: 220px;
+        height: 433px;
+    }
+
+    @media (min-width: 1170px) {
+        left: 0;
+        width: 263px;
+        height: 461px;
+    }
+
+    &--novelty {
+        width: 220px;
+        height: 433px;
+
+        &:not(:first-child) {
+            margin-left: 31px;
+
+            @media (min-width: 765px) {
+                margin-left: 25px;
+            }
+
+            @media (min-width: 1170px) {
+                margin-left: 26px;
+            }
+        }
+
+        @media (min-width: 1170px) {
+            width: 263px;
+            height: 461px;
+        }
+    }
+
+    &--new {
+        position: relative;
+   
+        &::before,
+        &::after {
+            position: absolute;
+            z-index: 2;
+            transform: rotate(-45deg);
+        }
+            
+        &::before {
+            content: "";
+            top: 20px;
+            left: -34px;
+            width: 131px;
+            height: 28px;
+            background-color: @green_1;
+
+            @media (min-width: 765px) {
+                top: 21px;
+                left: -36px;
+                width: 133px;
+                height: 29px;
+            }
+        }
+
+        &::after {
+            content: "new";
+            top: 25px;
+            left: 17px;
+            .robotoslab-bold;
+            font-size: 16px;
+            line-height: 9px;
+            color: @white_1;              
+        }
+    }
+}
+    
+.picture-wrap {
+
+    &--fire {
+        position: relative;
+
+        &::before,
+        &::after {
+            position: absolute;
+            content: "";
+        }
+
+        &::before {
+            top: 16px;
+            right: 23px;
+            width: 41px;
+            height: 41px;
+            border-radius: 50%;
+            background: #e95241; // Заменить градиентом
+
+            @media (min-width: 765px) {
+              right: 17px;
+            }
+        }
+
+        &::after {
+            top: 23px;
+            right: 30px;
+            width: 25px;
+            height: 26px;
+            background-image: url(../img/icons/fire.svg);
+            .bg-img;
+
+            @media (min-width: 765px) {
+                top: 22px;
+                right: 24px;
+            }
+        }
+
+        &-novelty {
+           padding-top: 2px;
+           
+            &::before {
+                top: 17px;
+                right: 15px;
+            }
+
+            &::after {
+                top: 23px;
+                right: 22px;
+            }
+        }
+    }
+
+    &--hit::before,
+    &--veg::before {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        width: 54px;
+        height: 54px;
+        padding: 18px 10px 18px 12px;
+        .robotoslab-bold;
+        font-size: 16px;
+        line-height: 14px;
+        color: @white_1;
+        border-radius: 50%;
+        box-shadow: 0px 7px 10px 0px rgba(0,0,0,0.38);
+        .bg-img;
+
+        @media (min-width: 765px) {
+            top: 15px;
+            right: 18px;
+            width: 48px;
+            height: 48px;
+            font-size: 14px;
+            line-height: 12px;
+            padding: 16px 10px 18px 12px;
+        }
+    }
+
+    &--hit::before {
+        content: "хит";
+        background: #db4938; // Заменить градиентом
+    } 
+
+    &--veg::before {
+        content: "veg";
+        background: #469505; // Заменить градиентом
+    }
+}

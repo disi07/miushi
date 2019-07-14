@@ -1,0 +1,92 @@
+.cmn-toggle-switch {
+    position: absolute;
+    z-index: 5;
+    top: 0.6rem;
+    left: 1.5rem;
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 2.5rem;
+    height: 2rem;
+    overflow: hidden;
+    font-size: 0;
+    text-indent: -9999px;
+    appearance: none;
+    box-shadow: none;
+    border-radius: none;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease-out;
+  }
+  @media (min-width: 1170px) {
+    .cmn-toggle-switch {
+      display: none;
+    }
+  }
+  .cmn-toggle-switch:focus {
+    outline: none;
+  }
+  .cmn-toggle-switch span {
+    position: absolute;
+    top: 1.25rem;
+    left: 0.3125rem;
+    right: 0.3125rem;
+    display: block;
+    height: 0.2rem;
+    background-color: @green_1;
+  }
+  .cmn-toggle-switch span::before,
+  .cmn-toggle-switch span::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 0.2rem;
+    background-color: @green_1;
+  }
+  .cmn-toggle-switch span::before {
+    top: 0.45rem;
+  }
+  .cmn-toggle-switch span::after {
+    bottom: 0.4rem;
+  }
+  .cmn-toggle-switch__htx {
+    background-color: transparent;
+  }
+  .cmn-toggle-switch__htx span {
+    transition: background 0.3s;
+  }
+  .cmn-toggle-switch__htx span::before,
+  .cmn-toggle-switch__htx span::after {
+    transition-duration: 0.3s, 0.3s;
+    transition-delay: 0.3s, 0;
+  }
+  .cmn-toggle-switch__htx span::before {
+    transition-property: top;
+    transition-property: top, transform;
+    transition-property: top, transform;
+  }
+  .cmn-toggle-switch__htx span::after {
+    transition-property: bottom;
+    transition-property: bottom, transform;
+    transition-property: bottom, transform;
+  }
+  .cmn-toggle-switch__htx.active {
+    position: fixed;
+  }
+  .cmn-toggle-switch__htx.active span {
+    background: none;
+  }
+  .cmn-toggle-switch__htx.active span::before,
+  .cmn-toggle-switch__htx.active span::after {
+    transition-delay: 0, 0.3s;
+  }
+  .cmn-toggle-switch__htx.active span::before {
+    top: 0;
+    transform: rotate(45deg);
+  }
+  .cmn-toggle-switch__htx.active span::after {
+    bottom: 0;
+    transform: rotate(-45deg);
+  }

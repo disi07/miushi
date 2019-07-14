@@ -1,0 +1,171 @@
+.pizza {
+    padding-top: 10px;
+
+    @media (min-width: 765px) {
+        padding-top: 33px
+    }
+}
+
+.card-item--pizza {
+    width: 228px;
+    height: 433px;
+
+    @media (min-width: 765px) {
+        width: 220px;
+    }
+
+    @media (min-width: 1170px) {
+        width: 263px;
+        height: 461px;
+    }
+
+    .picture-wrap {
+        width: 228px;
+        height: 214px;
+
+        @media (min-width: 765px) {
+            width: 220px;
+        }
+
+        @media (min-width: 1170px) {
+            width: 263px;
+            height: 228px;
+        }
+    }
+
+    .card-item__title {
+        .m-0;
+        margin: 13px 0 13px 0;
+        padding-right: 8px;
+        .opensans-bold;
+        font-size: @card_title;
+        line-height: 28px;
+        letter-spacing: -.02rem;
+
+        @media (min-width: 765px) {
+            letter-spacing: -.03rem;
+            padding-right: 5px;
+        }
+    }
+
+    .card-item__param {
+        margin-bottom: 19px;
+        padding-right: 6px;
+        .opensans-light;
+        font-size: @card_param;
+        line-height: 20px;
+        letter-spacing: -0.01rem;
+
+        @media (min-width: 765px) {
+            padding-right: 2px;
+            margin-bottom: 20px;
+        }
+    }
+
+    .card-item__info {
+        .row;
+        .justify-between;
+        .align-center;
+        padding: 0 21px 0 19px;
+        margin: 17px 0 23px 0;
+        letter-spacing: -0.02rem;
+
+        @media (min-width: 765px) {
+            padding: 0 17px 0 18px;
+            margin: 17px 0 22px 0;
+        }
+
+        .price,
+        .number {
+            .m-0;
+        }
+
+        .number {
+            .row;
+            .align-center;
+            .opensans-regular;
+            font-size: @card_number;
+            line-height: 28px;
+        }
+
+        .price {
+            .robotoslab-bold;
+            font-size: @card_price;
+            line-height: 25px;
+
+            .sup {
+                top: -0.5rem;
+                margin-bottom: 3px;
+                margin-left: 6px;
+                .robotoslab-bold;
+                font-size: 12px;    
+            }
+        }
+
+        .minus,
+        .plus {
+            position: relative;
+            display: block;
+            width: 13px;
+            height: 13px;
+            .m-0;
+            border: 1px solid @brown_2;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .minus {
+            margin-right: 14px;
+        }
+
+        .plus {
+            margin-left: 14px;
+        }
+
+        .minus::before,
+        .plus::before {
+            position: absolute;
+            content: "";
+            top: 50%;
+            left: 50%;
+            width: 5px;
+            transform: translate(-50%, -50%);
+            .bg-img;
+        }
+
+        .minus::before {
+            height: 1px;
+            background-image: url(../img/icons/minus.svg); // Сделать жирнее
+        }
+
+        .plus::before {
+            height: 5px;
+            background-image: url(../img/icons/plus.svg); // Сделать жирнее
+        }
+    }
+
+    .card-item__btn {
+        position: relative;
+        margin: auto;
+        margin-left: -2px;
+        padding: 7px 76px 6px 32px;
+        .opensans-semibold;
+        font-size: 14px;
+
+        @media (min-width: 765px) {
+            margin-left: 0px;
+            padding: 7px 77px 6px 32px;
+        }
+
+        &::before {
+            position: absolute;
+            content: "";
+            width: 22px;
+            height: 20px;
+            top: 11px;
+            right: 30px;
+            background-image: url(../img/icons/cart-white.svg);
+            .bg-img;
+        }
+    }
+}

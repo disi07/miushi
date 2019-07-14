@@ -1,0 +1,96 @@
+.card-item__pagination {
+    .row-nowrap;
+    .justify-center;
+    .align-center;
+    width: 600px;
+    margin: auto;
+    display: none;
+
+    &--relative {
+        position: relative;
+        top: 10px;
+    }
+
+    @media (min-width: 765px) {
+        display: flex;
+    }
+
+	.dots-list {
+		position: relative;
+        .row-nowrap;
+		.col-4;
+        .justify-center;
+        .p-0--m-0;
+        margin-bottom: 30px; // Временно
+		list-style: none;
+
+		.dots__item {
+			width: 2px;
+			height: 2px;
+			padding: 5px;
+			border-radius: 50%;
+            background: @light-grey_1;
+            cursor: pointer;
+
+            &:not(:first-child) {
+                margin-left: 20px;
+            }
+
+            &--active {
+            	background-color: @green_1;
+            }
+		}
+	}
+}
+
+.prev {
+    position: relative;
+    padding: 5px;
+    display: block;
+    width: 27px;
+    height: 20px;
+
+    &::before {
+        position: absolute;
+        content: "";
+        top: -15px;
+        left: -40px;
+        width: 27px;
+        height: 20px;
+        opacity: 0.5;
+        .bg-img;
+        cursor: pointer;
+        right: 420px;
+        background-image: url(../img/icons/cards-pagination-arrow.svg);
+        transform: rotate(180deg);
+
+        @media (min-width: 765px) {
+            left: -8px;
+        }
+    }
+}
+
+.next {
+    position: relative;
+    padding: 5px;
+    display: block;
+    width: 27px;
+    height: 20px;
+
+    &::before {
+        position: absolute;
+        content: "";
+        top: -15px;
+        right: -40px;
+        width: 27px;
+        height: 20px;
+        opacity: 0.5;
+        .bg-img;
+        cursor: pointer;
+        background-image: url(../img/icons/cards-pagination-arrow.svg);
+
+        @media (min-width: 765px) {
+            right: -8px;
+        }
+    }
+}

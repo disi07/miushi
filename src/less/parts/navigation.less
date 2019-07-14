@@ -1,0 +1,222 @@
+.nav {
+	position: absolute;
+	z-index: 1000;
+	top: 0;
+	left: 0;
+	right: 0;
+	min-height: 100vh;
+	transform: translateX(-100%);
+	text-align: center;
+	background-color: @white_1;
+	transition: transform 0.3s ease-out;
+
+	&--active {
+		transform: translateX(0);
+	}
+		
+	@media (min-width: 1170px) {
+		position: static;
+		transform: translateX(0);
+		min-height: 61px;
+		.col-12;
+		.row;
+	}
+
+	&-list {
+		.p-0--m-0;
+		margin-top: 20px;
+		list-style: none;
+
+		@media (min-width: 1170px) {
+			.col-12;
+			.row;
+			.justify-around;
+			margin-top: 0;
+			min-height: 61px;
+			display: flex;
+		}
+
+		&__item {
+			padding: 20px 10px;
+
+			&:first-child {
+				position: relative;
+
+				&::after {
+					position: absolute;
+					content: "";
+					top: 30px;
+					left: 192px;
+					width: 10px;
+					height: 6px;
+					margin-left: 0.5rem;
+					transform: translateY(-53%);
+					background-image: url(../img/icons/menu-arrow--down.png); //Белый цвет при наведении
+					.bg-img;
+
+					@media (min-width: 1170px) {
+						padding: 20px 0;
+						top: 53%;
+						right: 8px;
+					}
+				}
+
+				@media (min-width: 1170px) {
+					&:hover,
+					&:focus {
+
+						.dropdown-menu {
+							display: block;
+						}
+					}
+				}
+
+				.dropdown-menu {
+					.p-0--m-0;
+					display: none;
+					list-style: none;
+					transition: display 0.3s ease-out;
+
+					@media (min-width: 1170px) {
+						position: absolute;
+						z-index: 2000;
+						top: 100%;
+						left: 0;
+						bottom: 0;
+						right: 0;
+						width: 100%;
+					}
+
+					&--active {
+						display: block;
+					}
+
+					&__item {
+						min-width: 100px;
+						text-align: center;
+						background-color: @white_1;
+						margin-top: 20px;
+
+						@media (min-width: 1170px) {
+							margin-top: 0;
+						}
+					}
+
+					&__link {
+						display: inline-block;
+						.opensans-semibold;
+						font-size: @menu-mobile;
+						text-transform: uppercase;
+						line-height: 2;
+						letter-spacing: 0.05rem;
+						color: @black_1;
+						text-decoration: none;
+
+						@media (min-width: 1170px) {
+							width: 100%;
+							padding: 10px;
+
+							&:hover,
+							&:focus {
+								background-color: @green_3;
+								color: @white_1;
+								transition: all 0.3s ease-out;
+								outline: none;	
+							}
+						}
+					}
+				}
+			}
+
+			&:last-child {
+				position: relative;
+				padding-left: 0;
+				display: none;
+
+				.nav-list__link {
+					margin-left: 0;
+				}
+
+				@media (min-width: 1170px) {
+					display: block;
+					padding-left: 1rem;
+					margin-left: 0;
+
+					&::before {
+						position: absolute;
+						content: "";
+						left: 8px;
+						width: 1.4375rem;
+						height: 1.3125rem;
+						background-image: url(../img/icons/cart.png);
+						.bg-img;
+					}
+
+					&::after {
+						position: relative;
+						content: "2";
+						right: 137px;
+						top: -0.55rem;
+						padding: 0.125rem 0.25rem;
+						.opensans-extrabold;
+						font-size: 0.4375rem;
+						text-transform: uppercase;
+						letter-spacing: 0.05em;
+						color: @white_1;
+						background-color: @orange_1;
+						border-radius: 0.1875rem;
+					}
+				}
+			}
+
+			&:nth-last-child(2) {
+				position: relative;
+				display: none;
+				padding-left: 0;
+				margin-left: 0;
+
+				.nav-list__link {
+					margin: 0;
+				}
+
+				@media (min-width: 1170px) {
+					display: block;
+					padding-left: 1.5rem;
+					margin-left: 1rem;
+
+					&::before {
+						position: absolute;
+						content: "";
+						left: 19px;
+						width: 1.4375rem;
+						height: 1.3125rem;
+						background-image: url(../img/icons/user.png);
+						.bg-img;
+					}
+				}
+			}
+		}
+
+		&__link {
+			padding: 10px;
+			text-decoration: none;
+			.opensans-semibold;
+			font-size: @menu;
+			text-transform: uppercase;
+			letter-spacing: 0.05rem;
+			color: @black_1;
+
+			@media (min-width: 1170px) {
+				padding: 1.35rem 1.5625rem;
+
+				&:hover,
+				&:focus {
+					outline: none;
+					background-color: @green_3;
+					color: @white_1;
+					transition: all 0.3s ease-out;	
+				}
+			}
+		}
+	}
+}

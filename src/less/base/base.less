@@ -1,0 +1,64 @@
+html,
+body {
+	font-family: 'OpenSans-Regular', 'Arial', 'Tahoma', sans-serif;
+	font-weight: normal;
+  	font-style: normal;
+  	font-size: 16px;
+  	overflow-x: hidden;
+}
+
+.container-fluid {
+	position: relative;
+	width: 100%;
+}
+
+.container {
+	position: relative;
+	margin: auto;
+	padding: 0 0.9375rem;
+	max-width: 1170px;
+
+	&--hidden-sm {
+		.p-0;
+
+		@media (min-width: 765px) {
+            padding: 0 0.9375rem;
+        }
+	}
+
+	// &--about {
+	// 	padding: 0;
+	// 	padding: 0 10px 0 10px;
+	// }
+}
+
+button {
+	cursor: pointer;
+}
+
+.hidden {
+	display: none;
+}
+
+.visually-hidden {
+	visibility: hidden;
+}
+
+.space {
+	display: block;
+
+	@media (min-width: 765px) {
+        display: none;
+    }
+}
+
+a {
+	text-decoration: none;
+}
+
+.body-no-scroll {
+max-height: 100vh;
+   width: 100%;
+   position: fixed;
+   overflow: hidden;
+}

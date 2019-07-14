@@ -1,0 +1,221 @@
+.header {
+	width: 100%;
+
+	.header-top-wrap {
+	
+		@media (min-width: 1170px) {
+			border-bottom: 1px solid @light_4;
+		}
+
+		.header-top {
+			.row;
+			.justify-center;
+			.align-center;
+			width: inherit;
+			height: 56px;
+
+			@media (min-width: 765px) {
+				height: 87px;
+			}
+
+			// .mobile-menu-icon {
+			// 	width: 22px;
+			// 	height: 14px;
+			// 	padding: 8px;
+			// 	margin-left: -1px;
+			// 	background-image: url(../img/icons/mobile-menu-icon.svg);
+			// 	.bg-img;
+
+			// 	@media (min-width: 765px) {
+			// 		margin: 3px 0 0 6px;
+			// 	}
+
+			// 	@media (min-width: 1170px) {
+			// 		display: none;
+			// 	}
+			// }
+
+			.logo--mobile {
+				width: 46px;
+                height: 44px;
+                margin: auto;
+				background-image: url(../img/icons/logo.jpg); // ?????
+				.bg-img;
+
+				@media (min-width: 765px) {
+					background-image: url(../img/icons/miushi-logo.svg);
+					width: 182px;
+					height: 82px;
+					margin: auto;
+                    // margin-left: 68px;
+                    // margin-top: 2px;
+				}
+
+				@media (min-width: 1170px) {
+                    margin-left: 0;
+				}
+				
+				// &__img {
+				// 	position: absolute;
+				// 	bottom: -8px;
+				// 	width: 70px;
+				// 	height: 70px;
+				// 	margin: auto;
+				// 	// margin-left: 1px;
+				// 	background-image: url(../img/icons/miushi-logo.svg);
+				// 	background-repeat: no-repeat;
+				// 	background-size: cover;
+				// 	background-position: top left;
+
+				// 	@media (min-width: 765px) {
+				// 	    width: 184px;
+				// 		height: 77px;
+				// 		margin: -6px 0 0 -2px;
+				// 		background-position: 100% 100%;
+				// 	}
+				// }
+			}
+
+			.contacts {
+				.row;
+				.col-8;
+				.justify-between;
+				.align-center;
+				display: none;
+
+				@media (min-width: 1170px) {
+					display: flex;
+					.col-7;
+				}
+
+				.adress,
+				.email {
+					position: relative;
+					.m-0;
+					margin-left: 3.4375rem;
+					.myriadpro-regular;
+					font-size: @contacts;
+				}
+
+				.email__link {
+					padding: 0.3125rem;
+					text-decoration: none;
+					color: @black_1;
+				}
+
+				.adress::before {
+					position: absolute;
+					content: "";
+					top: -0.1875rem;
+					left: -0.9375rem;
+					width: 0.75rem;
+					height: 1rem;
+					background-image: url(../img/icons/maps-and-flags.svg);
+					.bg-img;
+				}
+
+				.email::before {
+					position: absolute;
+					content: "";
+					left: -0.9375rem;
+					top: 0.1875rem;
+					width: 0.75rem;
+					height: 0.5625rem;
+					background-image: url(../img/icons/envelope.svg);
+					.bg-img;
+				}
+
+				.phone-time {
+
+					.phone {
+						.m-0;
+						.opensans-bold;
+						font-size: 1.125rem;
+						color: @black_2;
+
+						&__link {
+							padding: 0.3125rem;
+							text-decoration: none;
+							color: @black_1;
+						}
+					}
+
+					.time {
+						.m-0;
+						padding: 0.3125rem;
+						.opensans-regular;
+						font-size: 0.625rem;
+						color: @black_2;
+					}
+				}
+			}
+
+			.header-btn {
+				display: none;
+				padding: 0.75rem 1rem;
+				margin-right: 3rem;
+				.opensans-regular;
+				font-size: 0.8125rem;
+				text-transform: uppercase;
+				letter-spacing: 0.05em;
+				color: @green_1;
+				border: 0.0625rem solid @green_1;
+				border-radius: 0.3125rem;
+				background-color: transparent;
+
+				&:hover,
+				&:focus {
+					outline: none;
+					background-color: @green_3;
+					color: @white_1;
+					transition: all 0.3s ease-out;	
+				}
+		
+					@media (min-width: 1170px) {
+						display: block;
+					}
+			}
+
+			.nav-icons--mobile {
+				position: absolute;
+    			right: 1.5rem;
+				.row;
+				margin-left: 1px;
+		    	padding-right: 1px;
+
+		    	@media (min-width: 765px) {
+		    		// .col-2;
+					margin-top: 2px;
+				}
+
+				@media (min-width: 1170px) {
+					display: none;
+				}
+
+				.user-icon {
+					width: 22px;
+					height: 22px;
+					background-image: url(../img/icons/user.png);
+					.bg-img;
+
+					@media (min-width: 765px) {
+			    		margin-left: 29px;
+					}
+				}
+
+				.cart-icon {
+					width: 22px;
+					height: 20px;
+					margin-left: 21px;
+					margin-top: 1px;
+					background-image: url(../img/icons/cart.png);
+					.bg-img;
+
+					@media (min-width: 765px) {
+						margin: 0 -8px 0 31px;
+					}
+				}
+			}
+		}
+	}	
+}

@@ -1,0 +1,334 @@
+.wok {
+    padding: 17px 0 19px 0;
+
+    @media (min-width: 765px) {
+        padding: 50px 0 52px 0;
+    }
+}
+
+.card-item--wok {
+	width: 229px;
+    height: 507px !important;
+
+    @media (min-width: 765px) {
+        width: 221px;
+    }
+
+    @media (min-width: 1170px) {
+        width: 263px;
+        height: 537px;
+    }
+
+    .picture-wrap {
+        width: 229px;
+        height: 213px;
+
+        @media (min-width: 765px) {
+            width: 221px;
+        }
+
+        @media (min-width: 1170px) {
+            width: 263px;
+            height: 228px;
+        }
+
+        &--image-center {
+            .p-0;
+            padding: 26px 6px 0 0;
+            .row;
+            .justify-center;
+            .align-center;
+
+            @media (min-width: 765px) {
+                padding: 24px 2px 0 0;
+            }
+        }
+    }
+
+    .card-item__title {
+        .m-0;
+        margin: 33px 0 13px 0;
+        padding-right: 8px;
+        .opensans-bold;
+        font-size: @card_title;
+        line-height: 28px;
+        letter-spacing: -.02rem;
+    }
+
+    .card-item__param {
+        margin-bottom: 9px;
+        padding-right: 6px;
+        .opensans-light;
+        font-size: @card_param;
+        line-height: 20px;
+        letter-spacing: -0.01rem;
+
+        @media (min-width: 765px) {
+            padding-right: 2px;
+        }
+    }
+
+    .card-item__info {
+        .row;
+        .justify-between;
+        .align-center;
+        padding: 0 21px 0 19px;
+        margin: 22px 0 22px 0;
+        letter-spacing: -0.02rem;
+
+        @media (min-width: 765px) {
+            padding: 0 17px;
+            margin: 22px 0 23px 0;
+        }
+
+        .price,
+        .number {
+            .m-0;
+        }
+
+        .number {
+            .row;
+            .align-center;
+            .opensans-regular;
+            font-size: @card_number;
+            line-height: 28px;
+        }
+
+        .price {
+            .robotoslab-bold;
+            font-size: @card_price;
+            line-height: 25px;
+
+            .sup {
+                top: -0.5rem;
+                margin-bottom: 3px;
+                margin-left: 6px;
+                .robotoslab-bold;
+                font-size: 12px;    
+            }
+        }
+
+        .minus,
+        .plus {
+            position: relative;
+            display: block;
+            width: 13px;
+            height: 13px;
+            .m-0;
+            border: 1px solid @brown_2;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .minus {
+            margin-right: 14px;
+        }
+
+        .plus {
+            margin-left: 14px;
+        }
+
+        .minus::before,
+        .plus::before {
+            position: absolute;
+            content: "";
+            top: 50%;
+            left: 50%;
+            width: 5px;
+            transform: translate(-50%, -50%);
+            .bg-img;
+        }
+
+        .minus::before {
+            height: 1px;
+            background-image: url(../img/icons/minus.svg); // Сделать жирнее
+        }
+
+        .plus::before {
+            height: 5px;
+            background-image: url(../img/icons/plus.svg); // Сделать жирнее
+        }
+    }
+
+    &__add {
+        position: relative;
+        // width: 200px;
+        // margin: auto;
+        margin-bottom: 10px;
+        padding: 0 10px 0 15px;
+        .row-nowrap;
+        .justify-between;
+        .align-center;
+        .opensans-regular;
+        font-size: 12px;
+        line-height: 28px;
+
+        @media (min-width: 765px) {
+            padding: 0 14px 0 14px;
+        }
+
+        &::after {
+            position: absolute;
+            content: "";
+            top: 8px;
+            left: 108px;
+            width: 12px;
+            height: 12px;
+            opacity: 0.5;
+            background-image: url(../img/icons/cross.svg);
+            .bg-img;
+            cursor: pointer;
+        }
+
+        .sup {
+            top: -.2em;
+            margin-right: 9px;
+            letter-spacing: -0.08rem;
+        }
+    }
+
+    &__input {
+        position: relative;
+        width: 45px;
+        height: 20px;
+        padding: 5px 17px 5px 2px;
+        margin-left: 7px;
+        background-color: @light_4;
+        border: none;
+        border-radius: 3px;
+
+        @media (min-width: 765px) {
+            margin-left: 7px;
+        }
+    }
+
+    &__btn {
+        position: relative;
+        display: inline-block;
+        width: 19px;
+        height: 19px;
+        margin: -1px 9px 0 11px;
+        font-size: 18px;
+        border-radius: 3px !important;
+
+        &::before {
+            position: absolute;
+            content: "+";
+            top: -5px;
+            left: 5px;
+            width: 9px;
+            height: 9px;
+            font-size: 18px;
+            color: @white_1;
+        }
+
+        @media (min-width: 765px) {
+            margin: -1px 0 0 0;
+        }
+    }
+
+    .sauce-price {
+        margin-left: 13px;
+        .opensans-light;
+        font-size: 12px;
+        line-height: 28px;
+
+        @media (min-width: 765px) {
+            margin-left: 9px;
+        }
+    }
+
+    .sauce-list {
+        width: 100%;
+        height: 100%;
+        padding: 0 0 3px 7px;
+        .opensans-light;
+        font-size: 12px;
+        line-height: 28px;
+        letter-spacing: -0.01rem;
+        background-color: @light_4;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+
+        @media (min-width: 765px) {
+            padding-left: 10px;
+        }
+    }
+
+    .sauce-select {
+        position: relative;
+        margin: auto;
+        width: 193px;
+        height: 26px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+
+        &::before,
+        &::after {
+            position: absolute;
+            content: "";
+            pointer-events: none;
+        }
+
+        &::before {
+            top: 0;
+            right: 0;
+            z-index: 1;
+            display: block;
+            width: 25px;
+            height: 25px;
+            border: none;
+            border-radius: 3px;
+            background-color: @light_2; // Заменить градиентом
+        }
+
+        &::after {
+            z-index: 2;
+            top: 9px;
+            right: 10px;
+            width: 10px;
+            height: 6px;
+            background-image: url(../img/icons/wok-card-arrow-down.svg);
+            pointer-events: none;
+
+            @media (min-width: 765px) {
+                top: 8px;
+                right: 8px;
+            }
+        }
+
+        @media (min-width: 765px) {
+            .m-0;
+            width: 206px;
+            height: 25px;
+            padding-left: 13px;
+        }
+    }
+
+    .card-item__btn {
+        position: relative;
+        margin: auto;
+        margin-left: -6px;
+        padding: 7px 76px 6px 32px;
+        .opensans-semibold;
+        font-size: 14px;
+
+        &::before {
+            position: absolute;
+            content: "";
+            width: 22px;
+            height: 20px;
+            top: 11px;
+            right: 30px;
+            background-image: url(../img/icons/cart-white.svg);
+            .bg-img;
+        }
+
+        @media (min-width: 765px) {
+            margin-left: -3px;
+            padding: 7px 77px 6px 32px;
+        }
+    }
+}

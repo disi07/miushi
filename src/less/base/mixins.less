@@ -1,0 +1,160 @@
+/* FONTS */
+
+/* Open-Sans */
+
+.opensans-light {
+	font-family: 'OpenSans-Light';
+	font-weight: 300;
+  	font-style: normal;
+}
+
+.opensans-regular {
+	font-family: 'OpenSans-Regular';
+	font-weight: 400;
+  	font-style: normal;
+}
+
+.opensans-italic {
+	font-family: 'OpenSans-Italic';
+	font-weight: 400;
+  	font-style: italic;
+}
+
+.opensans-semibold {
+	font-family: 'OpenSans-SemiBold';
+	font-weight: 600;
+  	font-style: normal;
+}
+
+.opensans-bold {
+	font-family: 'OpenSans-Bold';
+	font-weight: 700;
+  	font-style: normal;
+}
+
+.opensans-extrabold {
+	font-family: 'OpenSans-ExtraBold';
+	font-weight: 800;
+  	font-style: normal;
+}
+
+/* Lemon-Tuesday */
+
+.lemontuesday {
+	font-family: 'LemonTuesday';
+	font-weight: 400;
+	font-style: normal;
+}
+
+/* Roboto */
+
+.roboto-regular {
+	font-family: 'Roboto-Regular';
+	font-weight: 400;
+	font-style: normal;
+}
+
+/* Roboto-Slab */
+
+.robotoslab-bold {
+	font-family: 'RobotoSlab-Bold';
+	font-weight: 700;
+	font-style: normal;
+}
+
+/* Myriad-Pro */
+
+.myriadpro-regular {
+	font-family: 'MyriadPro-Regular';
+	font-weight: 400;
+	font-style: normal;
+}
+
+/* MAIN FEATURES */
+
+.p-0--m-0 {
+	padding: 0;	
+	margin: 0;
+}
+
+.m-0 {
+	margin: 0;
+}
+
+.p-0 {
+	padding: 0;
+}
+
+/* BACKGROUND IMAGES */
+
+.bg-img {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+/* Footer navigation titles */
+
+.footer-nav__title--mobile {
+	position: relative;
+	.m-0;
+	padding: 23px 16px;
+	.opensans-semibold;
+	font-size: 16px;
+	line-height: 1.15;
+    color: @white_1;
+    border-bottom: 1px solid @footer-nav__botom-border;
+
+    &::after {
+        position: absolute;
+        content: "";
+        top: 27px;
+        right: 18px;
+        width: 20px;
+        height: 11px;
+        background-image: url(../img/icons/footer-nav__arrow-down.svg);
+
+        @media (min-width: 765px) {
+            right: 11px;
+        }
+
+        @media (min-width: 1170px) {
+            display: none;
+        }
+    }
+}
+
+.footer-nav__title--table {
+    padding: 23px 7px;
+
+    // @media (min-width: 765px) {
+    //     padding: 23px 7px;
+    // }
+}
+
+.footer-nav__title--desktop {
+	// .m-0;
+ //    // margin: 0 0 15px 5px;
+	// .opensans-regular;
+ //    font-size: 14px;
+ //    color: @white_1;
+    border-bottom: none;
+}
+
+.footer-nav__link {
+	padding: 5px 17px;
+    .opensans-regular;
+	font-size: 12px;
+	line-height: 30px;
+	color: @grey_4;
+	transition: all 0.3s ease-out;
+
+	@media (min-width: 765px) {
+        padding: 5px 8px;
+	}
+	
+	&:hover,
+	&:focus {
+		color: @white_1;
+	}
+}

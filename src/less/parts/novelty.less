@@ -1,0 +1,218 @@
+.novelty {
+	padding: 13px 0 25px 0;
+	width: 100%;
+    height: 612px;
+	background: url(../img/mobile/bg/novelty-bg--mobile.svg); 
+	.bg-img;
+
+	@media (min-width: 765px) {
+        height: 694px;
+        background-image: url(../img/tablet/bg/novelty-bg--tablet.svg);
+    }
+
+    @media (min-width: 1170px) {
+        height: 739px;
+        background-image: url(../img/desktop/bg/novelty-bg--desktop.svg);
+    }
+
+	.section__title {
+		.m-0;
+	}
+
+	.novelty-menu {
+		.p-0--m-0;
+		margin: 0 0 32px 13px;
+		.row;
+		.justify-between;
+		width: 205px;
+		list-style: none;
+
+		@media (min-width: 765px) {
+			margin: 20px 0 42px 9px;
+            letter-spacing: -0.015rem;
+        }
+
+		letter-spacing: -0.015rem;
+
+		.novelty__link {
+			.opensans-semibold;
+			font-size: 18px;
+			line-height: 28px;
+			color: @grey_5;
+
+			&--active {
+				color: @orange_1;
+			}
+		}
+	}
+}
+
+.card-item--novelty {
+    // width: 220px !important;
+    // height: 433px;
+
+    // &:not(:first-child) {
+    //     margin-left: 31px !important;
+
+    //     @media (min-width: 1170px) {
+    //         margin-left: 26px !important;
+    //     }
+    // }
+
+    // @media (min-width: 1170px) {
+    //     width: 263px;
+    //     height: 461px;
+    // }
+
+    .picture-wrap {
+        width: 220px;
+        height: 214px;
+        padding-left: 4px;
+
+        // @media (min-width: 765px) {
+        //     width: 220px;
+        // }
+
+        @media (min-width: 1170px) {
+            width: 263px;
+            height: 228px;
+        }
+
+        &--image-center {
+            // padding: 2px 0 0 3px;
+            .row;
+            .justify-center;
+            .align-center;
+        }
+    }
+
+    .card-item__title {
+        .m-0;
+        margin: 13px 0 13px 0;
+        .opensans-bold;
+        font-size: @card_title;
+        line-height: 28px;
+        letter-spacing: -.02rem;
+
+        @media (min-width: 765px) {
+            margin: 13px 4px 13px 0;
+        }
+    }
+
+    .card-item__param {
+        margin-bottom: 19px;
+        .opensans-light;
+        font-size: @card_param;
+        line-height: 20px;
+        letter-spacing: -0.01rem;
+
+        @media (min-width: 765px) {
+            margin-right: 2px;
+        }
+    }
+
+    .card-item__info {
+        .row;
+        .justify-between;
+        .align-center;
+        padding: 0 13px 0 19px;
+        margin: 17px 0 23px 0;
+        letter-spacing: -0.02rem;
+
+        @media (min-width: 765px) {
+            padding: 0 15px 0 18px;
+        }
+
+        .price,
+        .number {
+            .m-0;
+        }
+
+        .number {
+            .row;
+            .align-center;
+            .opensans-regular;
+            font-size: @card_number;
+            line-height: 28px;
+        }
+
+        .price {
+            .robotoslab-bold;
+            font-size: @card_price;
+            line-height: 25px;
+
+            .sup {
+                top: -0.5rem;
+                margin-bottom: 3px;
+                margin-left: 6px;
+                .robotoslab-bold;
+                font-size: 12px;    
+            }
+        }
+
+        .minus,
+        .plus {
+            position: relative;
+            display: block;
+            width: 13px;
+            height: 13px;
+            .m-0;
+            border: 1px solid @brown_2;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .minus {
+            margin-right: 15px;
+        }
+
+        .plus {
+            margin-left: 15px;
+        }
+
+        .minus::before,
+        .plus::before {
+            position: absolute;
+            content: "";
+            top: 50%;
+            left: 50%;
+            width: 5px;
+            transform: translate(-50%, -50%);
+            .bg-img;
+        }
+
+        .minus::before {
+            height: 1px;
+            background-image: url(../img/icons/minus.svg); // Сделать жирнее
+        }
+
+        .plus::before {
+            height: 5px;
+            background-image: url(../img/icons/plus.svg); // Сделать жирнее
+        }
+    }
+
+    .card-item__btn {
+        position: relative;
+        margin: auto;
+        margin-left: 5px;
+        padding: 7px 76px 6px 32px;
+        .opensans-semibold;
+        font-size: 14px;
+
+        &::before {
+            position: absolute;
+            content: "";
+            width: 22px;
+            height: 20px;
+            top: 11px;
+            right: 30px;
+            background-image: url(../img/icons/cart-white.svg);
+            .bg-img;
+        }
+
+        @media (min-width: 765px) {
+            margin-left: 1px;
+        }
+    }   	
+}

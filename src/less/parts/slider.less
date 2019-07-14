@@ -1,0 +1,262 @@
+.slider {
+	position: relative;
+	width: 100%;
+	height: 280px;
+	.row;
+	flex-wrap: nowrap;
+	overflow: hidden;
+
+	@media (min-width: 765px) {
+		height: 420px;
+	}
+
+	@media (min-width: 1170px) {
+		height: 675px;
+	}
+
+	&-arrows {
+		.p-0--m-0;
+		list-style: none;
+
+		&--left,
+		&--right {
+			position: absolute;
+			z-index: 5000;
+			top: 50%;
+			display: none;
+			width: 53px;
+			height: 53px;
+			opacity: 0.5;
+			border-radius: 50%;
+			background-color: @black_1;
+			cursor: pointer;
+			transition: background-color 0.3s ease-out;
+
+			@media (min-width: 1170px) {
+		        display: block;
+			}
+			
+			&:hover {
+				background-color: @brown_1;
+			}
+		}
+
+		&--left {
+			left: 50px;
+
+			&::before {
+				position: absolute;
+				content: "";
+				top: 50%;
+				right: 50%;
+				transform: translateX(30%) translateY(-50%);
+				width: 10px;
+				height: 17px;
+				background-image: url(../img/icons/slider-arrow--left.svg); //Заменить svg
+				.bg-img;
+			}
+		}
+
+		&--right {
+			right: 50px;
+
+			&::before {
+				position: absolute;
+				content: "";
+				top: 50%;
+				left: 50%;
+				transform: translateX(-50%) translateY(-50%);
+				width: 10px;
+				height: 17px;
+				background-image: url(../img/icons/slider-arrow--right.svg); //Заменить svg
+				.bg-img;
+			}
+		}
+	}
+
+	.slide {
+		display: none;
+		width: 100vw;
+		min-height: 242px;
+		animation: header-slide 2s ease-out;
+
+		@media (min-width: 425px) {
+			min-height: 420px;
+		}
+
+		@media (min-width: 1170px) {
+			min-height: 675px;
+		}
+
+		&-content {
+			position: absolute;
+			top: 0;
+    		left: 5%;
+
+    		@media (min-width: 765px) {
+				top: 50px;
+    			left: 10%;
+			}
+
+			@media (min-width: 1170px) {
+				top: 60px;
+    			left: 21.2%;
+			}
+
+			&__title {
+				position: relative;
+				margin-bottom: 18px;
+				.lemontuesday;
+				font-size: 49px;
+				line-height: 1.2;
+				color: @green_3;
+				letter-spacing: -0.04rem;
+
+				@media (min-width: 765px) {
+					margin-bottom: 27px;
+					font-size: 72px;
+					letter-spacing: -0.05rem;
+				}
+
+				@media (min-width: 1170px) {
+					font-size: 110px;
+				}
+			}
+
+			&__discount {
+				position: absolute;
+				content: "";
+				top: 84px;
+    			left: 233px;
+				width: 67px;
+				height: 67px;
+				text-align: center;
+				padding-top: 18px;
+				.opensans-bold;
+				font-size: 14px;
+				letter-spacing: -0.03rem;
+    			line-height: 1.25;
+				color: @white_1;
+				border-radius: 50%;
+				background-color: #d81f24; // Заменить на градиент
+
+				@media (min-width: 375px) {
+					top: 33px;
+    				left: 280px;
+				}
+
+				@media (min-width: 765px) {
+					top: 68px;
+    				left: 425px;
+					width: 90px;
+					height: 90px;
+					padding-top: 26px;
+					font-size: 18.4px;
+				}
+
+				@media (min-width: 1170px) {
+					top: 0;
+    				left: 580px;
+					width: 142px;
+					height: 142px;
+					font-size: 28.8px;
+					padding: 39px 3px 0 2px;
+				}
+			}
+
+			&__subtitle {
+				.opensans-italic;
+				font-size: 12px;
+				color: @white_1;
+				letter-spacing: -0.01rem;
+
+				@media (min-width: 765px) {
+					margin-bottom: 29px;
+					font-size: 18px;
+				}
+
+				@media (min-width: 1170px) {
+					font-size: 26.4px;
+					letter-spacing: -0.022rem;
+				}
+			}
+
+			&__btn {
+				display: none;
+
+				@media (min-width: 765px) {
+					display: block;
+					margin-left: 4px;
+					padding: 0.85rem 2.62rem;
+					.opensans-regular;
+					font-size: 16px;
+				}
+
+				@media (min-width: 1170px) {
+					padding: 1.15rem 4.43rem;
+				}
+			}	
+		}
+
+		picture {
+			font-size: 0;
+		}
+	
+		img {
+			// position: relative;
+			width: 100%;
+			height: 242px;
+	
+			@media (min-width: 765px) {
+				height: 420px;
+			}
+	
+			@media (min-width: 1170px) {
+				height: 675px;
+			}
+		}
+	}
+
+	.slider-dots-list {
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		bottom: 8px;
+		width: 79px;
+		.row;
+		.p-0--m-0;
+		.justify-between;
+		list-style: none;
+
+		@media (min-width: 765px) {
+			bottom: 33px;
+			width: 96px;
+		}
+
+		.slider-dots__item {
+			padding: 0.28rem;
+			border-radius: 50%;
+			border: 2px solid @light-grey_2;
+			cursor: pointer;
+
+			@media (min-width: 765px) {
+				padding: 0.35rem;
+			}
+
+			&--active {
+				background-color: @green_1;
+				border: 2px solid @green_1;
+			}
+		}
+	}
+}
+
+@keyframes header-slide {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}

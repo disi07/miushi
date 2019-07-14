@@ -1,0 +1,214 @@
+.form {
+    position: relative;
+	width: 100%;
+    padding-bottom: 52px;
+    // height: 518px;
+    background-image: url(../img/mobile/bg/form-bg--mobile@1x.jpg);
+	background-position: 100% 67%;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media (min-width: 765px) {
+        padding-bottom: 82px;
+    }
+
+    &::before {
+        position: absolute;
+        content: "";
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        display: block;
+        overflow: hidden;
+        background-color: rgba(0, 0, 0, 0.7)
+    }
+
+    @media all and (min-device-pixel-ratio: 1.5) {
+        background-image: linear-gradient(to right, rgba(20, 22, 21, 0.1) 50%, rgba(20, 22, 21, 1) 100%), url(../img/mobile/bg/form-bg--mobile@2x.jpg);
+    }
+
+    @media (min-width: 1170px) {
+        height: 356px;
+        background-image: linear-gradient(to right, rgba(20, 22, 21, 0.1) 50%, rgba(20, 22, 21, 1) 100%), url(../img/desktop/bg/form-bg--desktop@1x.jpg);
+        background-position: 100% -10px;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        @media all and (min-device-pixel-ratio: 1.5) {
+            background-image: linear-gradient(to right, rgba(20, 22, 21, 0.1) 50%, rgba(20, 22, 21, 1) 100%), url(../img/desktop/bg/form-bg--desktop@2x.jpg);
+        }
+    }
+
+
+
+    &-wrap {
+        display: block;
+    	.p-0--m-0;
+
+        @media (min-width: 1170px) {
+            .col-6;
+            .offset-4;
+            margin-top: 80px;
+        }
+
+    	.form__title {
+    		position: relative;
+    		margin-top: 84px;
+    		.lemontuesday;
+            font-size: @form__title--mobile;
+    	    line-height: 1.2;
+            letter-spacing: 0.01rem;
+    	    color: @white_1;
+
+    	    &::before {
+                position: absolute;
+                content: "Есть вопросы?";
+                top: -39px;
+                left: 5px;
+                .opensans-regular;
+                font-size: 16px;
+                line-height: 30px;
+                letter-spacing: -0.01rem;
+
+                @media (min-width: 765px) {
+                    top: -28px;
+                    left: 9px;
+                }
+
+                @media (min-width: 765px) {
+                    top: -45px;
+                    left: 9px;
+                }
+    	    }
+
+            p {
+                .m-0;
+
+            }
+
+            @media (min-width: 765px) {
+                .row;
+                padding-left: 6px;
+                margin-top: 97px;
+                font-size: @form__title--desktop;
+                letter-spacing: 0;
+            }
+
+            @media (min-width: 1170px) {
+                margin-bottom: 29px;
+                font-size: @form__title--desktop;
+                line-height: 30px;
+            }
+    	}
+
+    	.contact-form {
+    		.row;
+    		.justify-between;
+    	}
+    }
+}
+
+.input-wrap {
+    // .column;
+
+    @media (min-width: 765px) {
+        .row-nowrap;
+    }
+
+	.user-name,
+	.user-email {
+        position: relative;
+		width: 100%;
+		height: 38px;
+		padding: 10px 10px 10px 16px;
+		.opensans-regular;
+		font-size: 14px;
+		line-height: 24px;
+		color: @white_1; // Временно
+		border: none;
+		border-bottom: 1px solid @white_1;
+		outline: none;
+		background-color: transparent;
+
+        &:focus {
+            background-color: rgba(255, 255, 255, 0.14);
+        }
+
+        @media (min-width: 765px) {
+            padding: 10px 10px 10px 14px;
+        }
+
+        @media (min-width: 1170px) {
+            width: 241px;
+        }
+	}
+
+	.user-name {
+        margin: 29px 0 0 0;
+
+        @media (min-width: 765px) {
+            width: 221px;
+            margin: 26px 29px 0 8px;
+        }
+
+        @media (min-width: 1170px) {
+            margin-right: 35px;
+        }
+	}
+
+    .user-email {
+        margin-top: 20px;
+
+        @media (min-width: 765px) {
+            width: 220px;
+            margin: 26px 29px 0 0;
+        }
+    }
+
+    .contact-form__submit {
+        // order: 1;
+        padding: 0 98px;
+        margin-top: 40px;
+        height: 48px;
+        letter-spacing: -0.02rem;
+
+        @media (min-width: 765px) {
+            padding: 0 65px;
+            margin-top: 20px;
+        }
+
+        @media (min-width: 1170px) {
+            padding: 0 51px;
+            margin-left: 60px;
+        }
+    }
+}
+
+// .form-btn-wrap {
+//     .column;
+// 	.col-12;
+// 	padding: 0;
+//     margin-top: 40px;
+
+//     @media (min-width: 1170px) {
+//         .col-2;
+//         margin-top: -10px;
+//     }
+
+    .warning {
+        order: 2;
+        .m-0;
+        margin: 20px 0 0 2px;
+        .opensans-regular;
+        font-size: 12px;
+        line-height: 1.25;
+        color: @white_1;
+        opacity: 0.7;
+        letter-spacing: 0.003rem;
+
+        @media (min-width: 765px) {
+            margin: 30px 0 0 7px;
+        }
+    }
+// }
